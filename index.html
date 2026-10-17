@@ -3,112 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SI1 - ARCHIWUM 150</title>
+<title>SI1 - SHADOW INCIDENT</title>
 <style>
-  body { background:#060a14; color:#b8cce8; font-family:monospace; margin:0; }
-  header { background:#0a1020; border-bottom:3px solid #00aaff; padding:25px 15px; text-align:center; position:sticky; top:0; z-index:1000; }
-  h1 { color:#00aaff; letter-spacing:8px; margin:0; font-size:32px; text-shadow:0 0 20px #00aaff; }
-  .sub { color:#334466; letter-spacing:3px; font-size:11px; margin-top:5px; }
-  nav { margin-top:15px; display:flex; flex-wrap:wrap; justify-content:center; gap:6px; max-width:900px; margin:auto; }
-  nav a { color:#556688; border:1px solid #112244; padding:6px 10px; text-decoration:none; font-size:10px; }
-  nav a:hover { color:#fff; background:#00aaff; border-color:#00aaff; box-shadow:0 0 10px #00aaff; }
-  section { max-width:900px; margin:auto; padding:50px 20px; border-bottom:1px solid #101a30; }
-  h2 { color:#00aaff; border-left:4px solid #00aaff; padding-left:12px; font-size:16px; letter-spacing:2px; }
-  .file { background:#0e172c; border:1px solid #1a2e55; padding:12px; margin:10px 0; font-size:13px; border-left:2px solid #00aaff; }
-  .file b { color:#00aaff; }
-  .alert { background:#001a33; border:1px solid #00aaff; color:#00aaff; padding:10px; text-align:center; margin:15px 0; }
-  footer { text-align:center; padding:40px; color:#112244; font-size:10px; }
+  body { background:#070b18; color:#c8d8f0; font-family: 'Segoe UI', monospace; margin:0; line-height:1.7; }
+  header { background: linear-gradient(#0e1a33, #070b18); border-bottom:2px solid #00aaff; padding:50px 20px; text-align:center; position:sticky; top:0; z-index:100; }
+  h1 { color:#00aaff; font-size:48px; letter-spacing:10px; margin:0; text-shadow:0 0 30px #00aaff; }
+  .sub { color:#445577; letter-spacing:4px; margin-top:10px; }
+  
+  /* DUŻE PRZYCISKI */
+  nav { margin-top:30px; display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+  nav a { 
+    color:#fff; background:#0e1a33; border:2px solid #00aaff; 
+    padding:14px 28px; text-decoration:none; font-size:14px; font-weight:bold; letter-spacing:1px;
+    border-radius:6px; transition:0.2s;
+  }
+  nav a:hover { background:#00aaff; box-shadow:0 0 20px #00aaff; transform:scale(1.05); }
+
+  section { max-width:800px; margin:auto; padding:80px 20px; }
+  
+  /* NAJWIĘKSZY TYTUŁ */
+  .big-title { font-size:36px; color:#00aaff; border-bottom:3px solid #00aaff; padding-bottom:15px; margin-bottom:40px; letter-spacing:5px; }
+  
+  /* MNIEJSZE TYTUŁY POD NIM */
+  .small-title { font-size:22px; color:#88bbff; margin-top:50px; margin-bottom:15px; border-left:4px solid #00aaff; padding-left:12px; }
+  
+  p { color:#a0b8d8; font-size:15px; }
+  .box { background:#101a30; border:1px solid #1a2e55; padding:18px; margin:15px 0; border-radius:8px; }
+  b { color:#00aaff; }
+  .highlight { color:#00aaff; font-weight:bold; }
+  footer { text-align:center; padding:50px; color:#223355; font-size:11px; }
 </style>
 </head>
 <body>
 
 <header>
   <h1>SI1</h1>
-  <div class="sub">150 PLIKÓW // ARCHIWUM ZAKAZANE // WERSJA NIEBIESKA</div>
+  <div class="sub">SHADOW INCIDENT // OŚRODEK CIEŃ</div>
   <nav>
-    <a href="#s1">FABUŁA</a><a href="#s2">ZGONY 1-20</a><a href="#s3">ZGONY 21-40</a><a href="#s4">LECZENIE</a><a href="#s5">BRONIE</a><a href="#s6">POTWORY</a><a href="#s7">MAPA</a><a href="#s8">LOGI 1-30</a><a href="#s9">LOGI 31-60</a><a href="#s10">SEKRETY</a><a href="#s11">ZAKOŃCZENIA</a><a href="#s12">O GRZE</a>
+    <a href="#fabula">FABUŁA</a>
+    <a href="#gra">O GRZE</a>
+    <a href="#bronie">BRONIE I POTWORY</a>
   </nav>
 </header>
 
-<section id="s1">
-  <h2>[01-10] FABUŁA SI1 - 10 PLIKÓW</h2>
-  <div class="file"><b>PLIK 01:</b> 1984 - Rozpoczęcie budowy Ośrodka Cień pod Wrocławiem. Oficjalnie fabryka żarówek.</div>
-  <div class="file"><b>PLIK 02:</b> 1985 - Pierwsze testy w Sali C. Naukowcy słyszą głosy z betonowej ściany która nie ma za sobą pomieszczenia.</div>
-  <div class="file"><b>PLIK 03:</b> 1986 - Zniknięcie ekipy sprzątającej. Znaleziono tylko mopy stojące w idealnym kółku.</div>
-  <div class="file"><b>PLIK 04:</b> 12.10.1987 01:00 - Główny incydent. Cały Sektor C zamyka się od środka. 47 osób w środku.</div>
-  <div class="file"><b>PLIK 05:</b> 12.10.1987 06:00 - Wojsko otacza kompleks. Żaden żołnierz nie chce wejść.</div>
-  <div class="file"><b>PLIK 06:</b> 1988 - Ty - Operator 7 - zgłaszasz się na ochotnika. Dlaczego? Bo Twój brat był w Saktorze C.</div>
-  <div class="file"><b>PLIK 07:</b> Twoja misja: Wejść, wziąć czarną skrzynkę, wyjść. 30 minut. Proste na papierze.</div>
-  <div class="file"><b>PLIK 08:</b> Ale Ośrodek pamięta każdego kto tam zginął. I teraz pamięta też Ciebie.</div>
-  <div class="file"><b>PLIK 09:</b> Korytarze są dłuższe niż powinny być. Zegarek staje w miejscu. Radio szumi Twoim imieniem.</div>
-  <div class="file"><b>PLIK 10:</b> Rozumiesz: incydent się nie skończył. On czekał 2 lata aż ktoś znowu wejdzie.</div>
+<!-- GŁÓWNY DZIAŁ 1 -->
+<section id="fabula">
+  <div class="big-title">FABUŁA</div>
+  <p>W 1987 roku Ośrodek Cień pod Wrocławiem traci łączność. 47 osób zostaje w środku. Wojsko otacza budynek, ale nikt nie chce wejść.</p>
+  <p>2 lata później Ty - Operator 7 - wchodzisz sam. Masz odzyskać czarną skrzynkę z Sektora C. Myślisz że to 30 minut. Ale korytarze są dłuższe w środku niż na zewnątrz. Zegarek staje. Radio woła Cię po imieniu.</p>
+  <p class="highlight">Incydent nigdy się nie skończył. On czekał na Ciebie.</p>
+
+  <div class="small-title">Jak zginęli?</div>
+  <div class="box"><b>Dr. Marek Nowak</b> - Szef projektu. Znaleziony w sali kontroli. Twarz zastygła w krzyku. W jego oczach odbicie czegoś wysokiego bez twarzy.</div>
+  <div class="box"><b>Anna Kowalska</b> - Technik. Znaleziona w wentylacji o średnicy 30cm. Ciało połamane w 14 miejscach. W dłoni trzyma klucz do Sektora C. Nie puściła go nawet po śmierci.</div>
+  <div class="box"><b>Strażnik Piotr</b> - Przecięty na pół idealnie równo. Krew na suficie. Kamery pokazują że 3 godziny stał i patrzył w ścianę zanim zaczął krzyczeć.</div>
+  <div class="box"><b>Zespół BETA (6 osób)</b> - Zniknęli. Zostało 6 par butów stojących w idealnym kółku. W środku napis z krwi: NIE WYCHODŹ.</div>
+
+  <div class="small-title">System leczenia - Twój pomysł</div>
+  <p>To nie jest zwykła apteczka. Każde leczenie ma konsekwencje:</p>
+  <div class="box"><b>Bandaż:</b> +20% HP, ale musisz stać 8 sekund w miejscu. Jeśli coś Cię uderzy - krwawisz 2x szybciej. Musisz znaleźć bezpieczny kąt.</div>
+  <div class="box"><b>Morfina:</b> +40% HP natychmiast i brak bólu na 60 sekund. Ale możesz wziąć tylko 3 na całą grę. Czwarta zabija. Po morfinie widzisz rzeczy których nie ma.</div>
+  <div class="box"><b>Adrenalina:</b> Nie leczy, ale daje Ci 15 sekund super szybkości. Możesz wyważyć drzwi i uciec. Ale serce wali tak głośno że potwory słyszą Cię z 3x większej odległości.</div>
+  <div class="box"><b>Niebieskie światło w sali medycznej:</b> Stoisz w nim = leczysz się 1% na sekundę. Ale światło przyciąga Cień. Im dłużej stoisz, tym bliżej on jest.</div>
 </section>
 
-<section id="s2">
-  <h2>[11-30] JAK ZGINĘLI - CZĘŚĆ 1</h2>
-  <div class="file"><b>11. Dr. Marek Nowak:</b> Zawał ze strachu. Twarz zastygła w krzyku. W oczach odbicie czegoś wysokiego.</div>
-  <div class="file"><b>12. Anna Kowalska:</b> Znaleziona w wentylacji 30cm średnicy. Jak się tam zmieściła? Ciało połamane w 14 miejscach.</div>
-  <div class="file"><b>13. Piotr W. Strażnik:</b> Przecięty na pół idealnie równo. Narzędzia nie znaleziono. Krew na suficie.</div>
-  <div class="file"><b>14. Zespół BETA (6 osób):</b> Buty stoją w kółku. Ciał nie ma. W środku kółka napis z krwi: NIE WYCHODŹ.</div>
-  <div class="file"><b>15. Kucharka Halina:</b> Utopiona w zupie. W stołówce. Zupa była zimna od 2 dni.</div>
-  <div class="file"><b>16. Technik Jan:</b> Znaleziony w szafce. Sam się zamknął od środka i podrapał drzwi paznokciami od środka.</div>
-  <div class="file"><b>17. Dr. Koval:</b> Zniknął. Został tylko dyktafon: 7 godzin ciszy i na końcu szept "Ono wie że nagrywam".</div>
-  <div class="file"><b>18-30:</b> 13 kolejnych osób - wszyscy w Sali C. Wszyscy patrzyli w jeden róg sali. Wszyscy umarli na stojąco. Oczy otwarte.</div>
+<!-- GŁÓWNY DZIAŁ 2 -->
+<section id="gra">
+  <div class="big-title">O GRZE</div>
+  <p>SI1 to nie gra o zabijaniu. To gra o przetrwaniu i nie zwariowaniu.</p>
+  
+  <div class="small-title">Jak grać?</div>
+  <p>Idziesz powoli. Nasłuchujesz. Latarka ma słabe baterie. Każde drzwi mogą skrzypieć. Jeśli biegniesz - potwory Cię słyszą. Jeśli stoisz za długo - przychodzą sprawdzić.</p>
+  <p>Nie ma mapy. Musisz zapamiętać drogę. Ale Ośrodek zmienia korytarze kiedy nie patrzysz.</p>
+
+  <div class="small-title">Klimat</div>
+  <div class="box">Bez jumpscare. Strach jest powolny. Światła gasną jedno po drugim. Słyszysz drapanie w wentylacji. Widzisz cień w rogu oka. To zostaje w głowie na długo po wyłączeniu gry.</div>
+  
+  <div class="small-title">Ile trwa?</div>
+  <p>90-120 minut jedno przejście. 3 różne zakończenia. Żadne nie jest szczęśliwe.</p>
 </section>
 
-<section id="s3">
-  <h2>[31-50] JAK ZGINĘLI - CZĘŚĆ 2</h2>
-  <div class="file"><b>31-35:</b> 5 żołnierzy wysłanych na zwiad w 1988. Wrócił tylko hełm jednego. W hełmie było pełno czarnych włosów które nie należały do niego.</div>
-  <div class="file"><b>36-40:</b> Ekipa sprzątająca. Znalezieni w windzie. Winda nie działała od roku. Była między piętrami.</div>
-  <div class="file"><b>41-45:</b> Dzieci pracowników które bawiły się w chowanego. Nigdy ich nie znaleziono. Ale czasem słychać śmiech dzieci w tunelach.</div>
-  <div class="file"><b>46-50:</b> Ty - jeśli zawiedziesz. W archiwum jest już Twoje zdjęcie z datą śmierci: 17.10.2026. Dzisiaj.</div>
+<!-- GŁÓWNY DZIAŁ 3 -->
+<section id="bronie">
+  <div class="big-title">BRONIE I POTWORY</div>
+
+  <div class="small-title">Bronie</div>
+  <div class="box"><b>Łom:</b> Cichy, nigdy się nie psuje. Uderz nim w rurę daleko od siebie - potwory pójdą sprawdzić hałas, a Ty uciekniesz.</div>
+  <div class="box"><b>Pistolet P-83 (8 kul):</b> Bardzo głośny. Jeden strzał = wszystkie potwory na piętrze wiedzą gdzie jesteś. Używaj tylko gdy nie ma innego wyjścia.</div>
+  <div class="box"><b>Latarka jako broń:</b> Mocny flash na 3 sekundy oślepia Cień. Masz 4 baterie. Potem jesteś w ciemności.</div>
+  <div class="box"><b>Gaśnica:</b> Robi chmurę dymu na 10 sekund. Potwory Cię nie widzą. Możesz się schować.</div>
+
+  <div class="small-title">Potwory</div>
+  <div class="box"><b>CIEŃ - Główny:</b> 2.2m wysokości, bez twarzy. Nie biega, tylko idzie. Wiesz że jest blisko bo wszystkie światła gasną po kolei. Jeśli patrzysz na niego dłużej niż 3 sekundy - zaczynasz krwawić. Nie da się go zabić.</div>
+  <div class="box"><b>Pełzacze:</b> Kiedyś byli ludźmi. Teraz pełzają po ścianach i suficie. Boją się światła. Słyszysz ich paznokcie drapiące o beton.</div>
+  <div class="box"><b>Głosy Ośrodka:</b> To nie potwór. To budynek. Naśladuje głosy zmarłych. Woła Cię po imieniu z wentylacji. Jeśli odpowiesz - coś przyjdzie.</div>
 </section>
 
-<section id="s4">
-  <h2>[51-70] SYSTEM LECZENIA - 20 PLIKÓW</h2>
-  <div class="file"><b>51. BANDAŻ:</b> +20% HP, 8s bandażowania. Musisz stać. Jeśli Cię uderzą - krwawisz x2.</div>
-  <div class="file"><b>52. BANDAŻ BRUDNY:</b> +10% HP ale infekcja. Wzrok rozmazany na 2 min.</div>
-  <div class="file"><b>53. MORFINA:</b> +40% HP natychmiast. 3 sztuki na grę. 4 zabija.</div>
-  <div class="file"><b>54. MORFINA PRZETERMINOWANA:</b> +50% HP ale przez 30s widzisz potwory których nie ma.</div>
-  <div class="file"><b>55. ADRENALINA:</b> Speed x1.5 na 15s. Potwory słyszą Cię x3 dalej.</div>
-  <div class="file"><b>56. APTECZKA WOJSKOWA:</b> +70% HP ale waży 3kg - biegasz wolniej.</div>
-  <div class="file"><b>57. NIEBIESKIE ŚWIATŁO:</b> Stoisz = +1% HP / sek. Ale przyciąga Cień.</div>
-  <div class="file"><b>58. WODA Z KRANU:</b> +5% HP ale 20% szans na wymioty i hałas.</div>
-  <div class="file"><b>59. TABLETKI:</b> Znajdujesz losowe. Nie wiesz co robią dopóki nie weźmiesz.</div>
-  <div class="file"><b>60-70:</b> 10 przepisów craftingu: bandaż + wódka = lepszy bandaż. Morfina + adrenalina = tryb przetrwania na 5s ale potem prawie umierasz.</div>
-</section>
+<footer>
+  SI1 // ARCHIWUM NIEBIESKIE // WERSJA PŁYNNA // WROCŁAW 2026
+</footer>
 
-<section id="s5">
-  <h2>[71-85] BRONIE - 15 PLIKÓW</h2>
-  <div class="file"><b>71. ŁOM:</b> Cichy, nieskończony. Uderz w rurę = potwory idą tam, nie do Ciebie.</div>
-  <div class="file"><b>72. MŁOTEK:</b> Szybszy niż łom, mniej obrażeń. Możesz zabarykadować drzwi.</div>
-  <div class="file"><b>73. P-83 PISTOLET:</b> 8 kul. Głośny jak diabli. 1 strzał = alarm dla całego piętra.</div>
-  <div class="file"><b>74. STRZELBA (1 nabój):</b> Znajdziesz w sejfie. Zabija Pełzacza na raz. Ale odrzut łamie Ci rękę - celujesz gorzej przez 5 min.</div>
-  <div class="file"><b>75. LATARKA-BROŃ:</b> Flash 3s oślepia Cień. 4 baterie.</div>
-  <div class="file"><b>76. GAŚNICA:</b> Dym 10s niewidzialności.</div>
-  <div class="file"><b>77. NÓŻ:</b> Możesz przeciąć taśmę, ale nie zabijesz nim nic dużego.</div>
-  <div class="file"><b>78. KRZESŁO:</b> Rzuć = hałas i potwór idzie sprawdzić.</div>
-  <div class="file"><b>79-85:</b> 7 sekretnych broni: klucz francuski, kabel, szkło, ogień z kuchni, radio jako wabik, lustro które odbija Cień.</div>
-</section>
-
-<section id="s6">
-  <h2>[86-100] POTWORY - 15 PLIKÓW</h2>
-  <div class="file"><b>86. CIEŃ (GŁÓWNY):</b> 2.2m, bez twarzy. Nie biega. Gasną światła po kolei. Patrzysz >3s = krwawisz. Nie da się zabić.</div>
-  <div class="file"><b>87. PEŁZACZE x12:</b> Po ścianach. Boją się światła. Drapanie = są blisko.</div>
-  <div class="file"><b>88. MIMIK:</b> Naśladuje Twój głos z radia. Woła pomoc Twoim głosem.</div>
-  <div class="file"><b>89. DZIECI:</b> Śmiech w tunelach. Jeśli pójdziesz za śmiechem - znajdziesz martwe zabawki i stracisz drogę.</div>
-  <div class="file"><b>90. ŚCIANA:</b> Czasem korytarz oddycha. To nie potwór. To cały budynek.</div>
-  <div class="file"><b>91-100:</b> 10 wariantów: Cień bez rąk, Cień z kluczami, Cień który stoi za Tobą w odbiciu okna, Cień który kopiuje Twoje ruchy z opóźnieniem 2s.</div>
-</section>
-
-<section id="s7"><h2>[101-110] MAPA OŚRODKA</h2><div class="file"><b>101-110:</b> Recepcja, Stołówka, Kuchnia, Sypialnie, Laboratorium A/B/C, Tunele, Wentylacja, Dach, Piwnica zalana czarną wodą. Każde miejsce ma 3 sekrety. Mapa zmienia się gdy nie patrzysz. Kompas nie działa w Sektorze C.</div></section>
-
-<section id="s8"><h2>[111-130] LOGI AUDIO</h2><div class="file"><b>111:</b> "Weszliśmy do C. Boże ściany oddychają." <b>112:</b> "To nas naśladuje." <b>113-130:</b> 18 logów: szept, krzyk, cisza 12 minut, nagranie Twojego głosu którego jeszcze nie powiedziałeś, odgłos ciągnięcia ciała, radio grające piosenkę z 2026 roku w 1987.</div></section>
-
-<section id="s9"><h2>[131-145] SEKRETY</h2><div class="file"><b>131:</b> Kod 1987 otwiera sejf. <b>132:</b> Jeśli stoisz 2 min w ciemności bez latarki - usłyszysz oddech. <b>133:</b> Lustro w łazience pokazuje Cię z tyłu. <b>134-145:</b> 12 sekretów: zdjęcie Twojego brata na ścianie, napis "WROCŁAW" krwią, radio szumi "pomóż mi".</div></section>
-
-<section id="s10"><h2>[146-150] ZAKOŃCZENIA I O GRZE</h2><div class="file"><b>146. ZAKOŃCZENIE A - UCIEKINIER:</b> Bierzesz skrzynkę i uciekasz. Ale w domu znajdujesz czarne włosy w łóżku.</div><div class="file"><b>147. ZAKOŃCZENIE B - ZOSTAJESZ:</b> Zostajesz w Ośrodku. Stajesz się nowym Cieniem. Teraz Ty straszysz następnego gracza.</div><div class="file"><b>148. ZAKOŃCZENIE C - UKRYTE:</b> Niszczysz skrzynkę. Ośrodek się zapada. Ale Ty nigdy nie istniałeś w dokumentach. Nikt Cię nie pamięta.</div><div class="file"><b>149. O GRZE:</b> SI1 to 90 min horroru bez jumpscare. Silnik Unity. 1 mapa bez loadingów. System leczenia który sam wymyśliłeś. Bronie które mają konsekwencje. Potwory których nie da się zabić.</div><div class="file"><b>150. KONIEC ARCHIWUM:</b> TO JEST NAJWIĘKSZE ARCHIWUM SI1. 150 PLIKÓW. NIEBIESKA WERSJA. ZROBIONA DLA PRAWDZIWYCH FANÓW HORRORU.</div></section>
-
-<footer>ARCHIWUM 150 // SI1 // NIEBIESKA WERSJA // 150 PLIKÓW // WROCŁAW 2026</footer>
 </body>
 </html>
