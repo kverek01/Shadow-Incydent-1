@@ -1,91 +1,79 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SHADOW: INCYDENT 1 | Oficjalna Strona</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHADOW INCYDENT 1 - RED EDITION</title>
 <style>
-:root{--red:#ff0f2a;--green:#00ff88;--bg:#07080b}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:radial-gradient(1200px 600px at 50% -10%, #1a1020 0%, var(--bg) 60%), var(--bg);color:#e6e6e6;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
-.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;border-bottom:1px solid #1a1a1a}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(255,15,42,0.03) 2px 3px);pointer-events:none}
-.glitch{font-family:'Orbitron',sans-serif;font-size:clamp(2.5rem,9vw,6rem);font-weight:900;letter-spacing:0.15em;color:#fff;text-shadow:0 0 20px var(--red), 0 0 80px var(--red);animation:gl 3s infinite}
-@keyframes gl{0%,90%,100%{transform:none}92%{transform:skewX(5deg)}94%{transform:skewX(-5deg)}}
-.subtitle{margin-top:15px;color:#888;letter-spacing:0.4em;font-size:0.8rem}
-.quote{margin-top:30px;border-left:3px solid var(--red);padding:10px 20px;background:rgba(255,15,42,0.07);max-width:700px;font-style:italic;color:#bbb}
-.container{max-width:1100px;margin:auto;padding:60px 20px}
-.section-title{font-family:'Orbitron';font-size:2rem;color:var(--red);margin:70px 0 25px;letter-spacing:0.2em;display:flex;align-items:center;gap:15px}
-.section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--red),transparent)}
-.card{background:linear-gradient(180deg,#111319,#0d0e12);border:1px solid #222;padding:25px;border-radius:12px;transition:0.3s;position:relative;overflow:hidden}
-.card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 10px 40px rgba(255,15,42,0.2)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
-.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-weight:700;letter-spacing:0.1em}
-.alive{background:rgba(0,255,136,0.15);color:var(--green);border:1px solid var(--green)}
-.dead{background:rgba(255,15,42,0.15);color:var(--red);border:1px solid var(--red)}
-.stats{display:flex;gap:30px;margin:25px 0;flex-wrap:wrap}
-.stat h3{font-family:'Orbitron';font-size:2.5rem;color:var(--red)}
-.monster{border-left:4px solid var(--red)}
-.footer{margin-top:100px;padding:40px 20px;text-align:center;color:#444;border-top:1px solid #111;font-size:0.8rem}
-.btn{margin-top:35px;padding:14px 32px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Orbitron';letter-spacing:0.2em;cursor:pointer;box-shadow:0 0 30px rgba(255,15,42,0.6);transition:0.2s}
-.btn:hover{transform:scale(1.05);box-shadow:0 0 50px rgba(255,15,42,0.9)}
-.tag{color:#555;font-size:0.7rem;letter-spacing:0.3em}
+body { background: #000; color: #ff0000; font-family: monospace; margin: 0; }
+header { background: #ff0000; color: black; padding: 20px; text-align: center; font-size: 30px; font-weight: bold; box-shadow: 0 0 30px red; }
+nav { display: flex; justify-content: center; gap: 10px; background: #1a0000; padding: 15px; flex-wrap: wrap; }
+nav button { background: black; color: red; border: 2px solid red; padding: 10px 15px; cursor: pointer; font-weight: bold; }
+nav button:hover { background: red; color: black; box-shadow: 0 0 15px red; }
+section { display: none; padding: 20px; max-width: 800px; margin: auto; }
+section.active { display: block; }
+.box { border: 2px solid red; padding: 15px; margin: 15px 0; background: #110000; box-shadow: 0 0 10px #ff000033; }
+h2 { color: #ff0000; text-shadow: 0 0 10px red; border-bottom: 2px solid red; }
+.glitch { animation: glitch 0.3s infinite; }
+@keyframes glitch { 0% { transform: translate(0); } 50% { transform: translate(1px, -1px); color: white; } 100% { transform: translate(0); } }
 </style>
 </head>
 <body>
-<div class="hero">
-<div class="tag">BSI PROJECT // 1989 - 1991 // CLASSIFIED</div>
-<div class="glitch">SHADOW<br>INCYDENT 1</div>
-<div class="subtitle">SURVIVAL / HORROR / AKCJA</div>
-<div class="quote">"Nie jest tylko jeden wirus, który niektórych zamienia w zombie, a niektórych zabija." — Ravenwood, 1989</div>
-<button class="btn" onclick="document.getElementById('fabula').scrollIntoView({behavior:'smooth'})">WEJDŹ DO BUNKRA</button>
-<div style="position:absolute;bottom:25px;color:#333;font-size:0.7rem;letter-spacing:0.5em">SCROLL</div>
-</div>
 
-<div class="container" id="fabula">
-<div class="section-title">FABUŁA</div>
-<div class="card" style="font-size:1.05rem;line-height:1.7">
-Alex (23 lata) i 5 kolegów po <b style="color:#fff">2 LATACH</b> w bunkrze wychodzą na powierzchnię. Świat się skończył. 50% populacji to zombie, reszta martwa. Cel: odkryć prawdę o BSI w Goldcrest i dotrzeć do pierwszego z 10 miast. SI1 to rok drogi. Cała saga SI10 kończy się bombą z lekiem. <br><br>
-<span style="color:var(--red)">Gatunek:</span> 3 lata fabularnie | Droga pełna zasadzek | 1 km przed miastem kończy się paliwo
-</div>
+<header class="glitch">☠️ SHADOW INCYDENT 1 - RED EDITION ☠️<br><small style="font-size:14px;">1000x LEPSZA NIŻ DEAD ZONA</small></header>
 
-<div class="stats">
-<div class="stat"><h3>10</h3><div>MIAST DO SI10</div></div>
-<div class="stat"><h3>50%</h3><div>ZOMBIE POPULACJA</div></div>
-<div class="stat"><h3>6</h3><div>Ocalałych</div></div>
-<div class="stat"><h3>1989</h3><div>ROK BSI</div></div>
-</div>
+<nav>
+<button onclick="show('fabula')">FABUŁA</button>
+<button onclick="show('akta')">AKTA TAJNE</button>
+<button onclick="show('raporty')">RAPORTY</button>
+<button onclick="show('dziennik')">DZIENNIK</button>
+<button onclick="show('gra')">GRAJ</button>
+</nav>
 
-<div class="section-title">DRUŻYNA — KTO PRZEŻYJE?</div>
-<div class="grid">
-<div class="card"><b>Alex</b> - Główny <br><small>23 lata, lider</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
-<div class="card"><b>Ethan Hunter</b><br><small>Taktyk</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
-<div class="card"><b>Blake Miller</b><br><small>Mechanik</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
-<div class="card"><b>Rayan Cole</b><br><small>Medyk</small><br><br><span class="badge dead">GINIE W SI1</span></div>
-<div class="card"><b>Jake Dawso</b><br><small>Zwiadowca</small><br><br><span class="badge dead">GINIE</span></div>
-<div class="card"><b>Leon Kalvinson</b><br><small>Najmłodszy</small><br><br><span class="badge dead">GINIE</span></div>
+<section id="fabula" class="active">
+<h2>📁 FABUŁA - POZIOM CZERWONY</h2>
+<div class="box">
+W 1997 roku w strefie zero zniknęło 17 osób. Rząd mówi że to wypadek. My wiemy że to kłamstwo. <br><br>
+<b>TY jesteś jednym z nich. I musisz wrócić. Ale coś wróciło z Tobą...</b>
 </div>
+<div class="box" style="border-color:white; color:white;">
+⚠️ DEAD ZONA to tylko zabawa. SHADOW INCYDENT to prawda która miała być ukryta.
+</div>
+</section>
 
-<div class="section-title">POTWORY BSI</div>
-<div class="grid">
-<div class="card monster"><h3 style="color:var(--red)">GOLDCREST BSI - B4 JAJO</h3><p style="margin-top:10px;color:#aaa">Ślepe. Nie widzą. Słyszą każdy oddech. Pazury tną beton. Gniazda w laboratoriach B4.</p></div>
-<div class="card monster"><h3 style="color:var(--red)">MEGA ZOMBIE 2.10m</h3><p style="margin-top:10px;color:#aaa">10% szans na spawn. Przełamuje barykady. Słychać go z kilometra.</p></div>
-<div class="card monster"><h3 style="color:var(--red)">ZAKOŃCZENIE SI1</h3><p style="margin-top:10px;color:#aaa">1km przed miastem brak paliwa. Barykada w domu w Westford. Kamera na drzwi. Klamka się uchyla... Czarny ekran: SHADOW INCYDENT 1</p></div>
-</div>
+<section id="akta">
+<h2>🔴 AKTA TAJNE - DOSTĘP ZABRONIONY</h2>
+<div class="box">[AKTA #001] Obiekt: SHADOW. Status: NIEZNISZCZALNY</div>
+<div class="box">[AKTA #002] Świadek: Mówił że widział czerwone oczy w ciemności. Potem zniknął.</div>
+<div class="box">[AKTA #003] Nagranie odzyskane: "ON TU JEST... ON..." [KONIEC NAGRANIA]</div>
+</section>
 
-<div class="section-title">INFO TECHNICZNE</div>
-<div class="card" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px">
-<div><b>PLATFORMA</b><br>PC / PS5 / PS4</div>
-<div><b>BROŃ</b><br>Palna i biała + craft</div>
-<div><b>SILNIK</b><br>Unreal / Survival System</div>
-<div><b>STATUS</b><br><span class="badge alive">SI1 IN DEVELOPMENT</span></div>
-</div>
-</div>
+<section id="raporty">
+<h2>📊 RAPORTY LABORATORIUM</h2>
+<div class="box">RAPORT 1: Poziom promieniowania: 1000% normy. Źródło: NIEZNANE</div>
+<div class="box">RAPORT 2: Wszystkie zegary zatrzymały się na 03:33. Co się dzieje o 03:33?</div>
+<div class="box">RAPORT 3: Znaleziono telefon. Ostatnia wiadomość: "NIE PATRZ ZA SIEBIE"</div>
+</section>
 
-<div class="footer">
-© 1989-1991 BSI PROJECT // SHADOW INCYDENT SAGA<br>
-SI1 — początek drogi po bombę z lekiem<br><br>
-kverek01.github.io/Shadow-Incydent-1
+<section id="dziennik">
+<h2>📓 DZIENNIK OCALAŁEGO</h2>
+<div class="box">Dzień 1: Słyszę kroki... ale nikogo nie ma.<br>Dzień 4: Znalazłem zdjęcie. To ja, ale nie pamiętam kiedy je zrobiłem.<br>Dzień 7: ON zna moje imię. Skąd?</div>
+</section>
+
+<section id="gra">
+<h2>🎮 POBIERZ GRĘ</h2>
+<div class="box" style="text-align:center; background:red; color:black; font-size:20px;">
+<b>SHADOW INCYDENT 1 - WKRÓTCE</b><br><br>
+To będzie gra 1000x lepsza niż Dead Zona.<br>
+I będzie na PC, a potem... na PS? Zobaczymy kto się będzie śmiał na końcu 😉
 </div>
+</section>
+
+<script>
+function show(id){
+ document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+</script>
 </body>
 </html>
