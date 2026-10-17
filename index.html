@@ -1,107 +1,91 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SI1 - SHADOW INCIDENT</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHADOW: INCYDENT 1 | Oficjalna Strona</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body { background:#070b18; color:#c8d8f0; font-family: 'Segoe UI', monospace; margin:0; line-height:1.7; }
-  header { background: linear-gradient(#0e1a33, #070b18); border-bottom:2px solid #00aaff; padding:50px 20px; text-align:center; position:sticky; top:0; z-index:100; }
-  h1 { color:#00aaff; font-size:48px; letter-spacing:10px; margin:0; text-shadow:0 0 30px #00aaff; }
-  .sub { color:#445577; letter-spacing:4px; margin-top:10px; }
-  
-  /* DUŻE PRZYCISKI */
-  nav { margin-top:30px; display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
-  nav a { 
-    color:#fff; background:#0e1a33; border:2px solid #00aaff; 
-    padding:14px 28px; text-decoration:none; font-size:14px; font-weight:bold; letter-spacing:1px;
-    border-radius:6px; transition:0.2s;
-  }
-  nav a:hover { background:#00aaff; box-shadow:0 0 20px #00aaff; transform:scale(1.05); }
-
-  section { max-width:800px; margin:auto; padding:80px 20px; }
-  
-  /* NAJWIĘKSZY TYTUŁ */
-  .big-title { font-size:36px; color:#00aaff; border-bottom:3px solid #00aaff; padding-bottom:15px; margin-bottom:40px; letter-spacing:5px; }
-  
-  /* MNIEJSZE TYTUŁY POD NIM */
-  .small-title { font-size:22px; color:#88bbff; margin-top:50px; margin-bottom:15px; border-left:4px solid #00aaff; padding-left:12px; }
-  
-  p { color:#a0b8d8; font-size:15px; }
-  .box { background:#101a30; border:1px solid #1a2e55; padding:18px; margin:15px 0; border-radius:8px; }
-  b { color:#00aaff; }
-  .highlight { color:#00aaff; font-weight:bold; }
-  footer { text-align:center; padding:50px; color:#223355; font-size:11px; }
+:root{--red:#ff0f2a;--green:#00ff88;--bg:#07080b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:radial-gradient(1200px 600px at 50% -10%, #1a1020 0%, var(--bg) 60%), var(--bg);color:#e6e6e6;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;border-bottom:1px solid #1a1a1a}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(255,15,42,0.03) 2px 3px);pointer-events:none}
+.glitch{font-family:'Orbitron',sans-serif;font-size:clamp(2.5rem,9vw,6rem);font-weight:900;letter-spacing:0.15em;color:#fff;text-shadow:0 0 20px var(--red), 0 0 80px var(--red);animation:gl 3s infinite}
+@keyframes gl{0%,90%,100%{transform:none}92%{transform:skewX(5deg)}94%{transform:skewX(-5deg)}}
+.subtitle{margin-top:15px;color:#888;letter-spacing:0.4em;font-size:0.8rem}
+.quote{margin-top:30px;border-left:3px solid var(--red);padding:10px 20px;background:rgba(255,15,42,0.07);max-width:700px;font-style:italic;color:#bbb}
+.container{max-width:1100px;margin:auto;padding:60px 20px}
+.section-title{font-family:'Orbitron';font-size:2rem;color:var(--red);margin:70px 0 25px;letter-spacing:0.2em;display:flex;align-items:center;gap:15px}
+.section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--red),transparent)}
+.card{background:linear-gradient(180deg,#111319,#0d0e12);border:1px solid #222;padding:25px;border-radius:12px;transition:0.3s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 10px 40px rgba(255,15,42,0.2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-weight:700;letter-spacing:0.1em}
+.alive{background:rgba(0,255,136,0.15);color:var(--green);border:1px solid var(--green)}
+.dead{background:rgba(255,15,42,0.15);color:var(--red);border:1px solid var(--red)}
+.stats{display:flex;gap:30px;margin:25px 0;flex-wrap:wrap}
+.stat h3{font-family:'Orbitron';font-size:2.5rem;color:var(--red)}
+.monster{border-left:4px solid var(--red)}
+.footer{margin-top:100px;padding:40px 20px;text-align:center;color:#444;border-top:1px solid #111;font-size:0.8rem}
+.btn{margin-top:35px;padding:14px 32px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Orbitron';letter-spacing:0.2em;cursor:pointer;box-shadow:0 0 30px rgba(255,15,42,0.6);transition:0.2s}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 50px rgba(255,15,42,0.9)}
+.tag{color:#555;font-size:0.7rem;letter-spacing:0.3em}
 </style>
 </head>
 <body>
+<div class="hero">
+<div class="tag">BSI PROJECT // 1989 - 1991 // CLASSIFIED</div>
+<div class="glitch">SHADOW<br>INCYDENT 1</div>
+<div class="subtitle">SURVIVAL / HORROR / AKCJA</div>
+<div class="quote">"Nie jest tylko jeden wirus, który niektórych zamienia w zombie, a niektórych zabija." — Ravenwood, 1989</div>
+<button class="btn" onclick="document.getElementById('fabula').scrollIntoView({behavior:'smooth'})">WEJDŹ DO BUNKRA</button>
+<div style="position:absolute;bottom:25px;color:#333;font-size:0.7rem;letter-spacing:0.5em">SCROLL</div>
+</div>
 
-<header>
-  <h1>SI1</h1>
-  <div class="sub">SHADOW INCIDENT // OŚRODEK CIEŃ</div>
-  <nav>
-    <a href="#fabula">FABUŁA</a>
-    <a href="#gra">O GRZE</a>
-    <a href="#bronie">BRONIE I POTWORY</a>
-  </nav>
-</header>
+<div class="container" id="fabula">
+<div class="section-title">FABUŁA</div>
+<div class="card" style="font-size:1.05rem;line-height:1.7">
+Alex (23 lata) i 5 kolegów po <b style="color:#fff">2 LATACH</b> w bunkrze wychodzą na powierzchnię. Świat się skończył. 50% populacji to zombie, reszta martwa. Cel: odkryć prawdę o BSI w Goldcrest i dotrzeć do pierwszego z 10 miast. SI1 to rok drogi. Cała saga SI10 kończy się bombą z lekiem. <br><br>
+<span style="color:var(--red)">Gatunek:</span> 3 lata fabularnie | Droga pełna zasadzek | 1 km przed miastem kończy się paliwo
+</div>
 
-<!-- GŁÓWNY DZIAŁ 1 -->
-<section id="fabula">
-  <div class="big-title">FABUŁA</div>
-  <p>W 1987 roku Ośrodek Cień pod Wrocławiem traci łączność. 47 osób zostaje w środku. Wojsko otacza budynek, ale nikt nie chce wejść.</p>
-  <p>2 lata później Ty - Operator 7 - wchodzisz sam. Masz odzyskać czarną skrzynkę z Sektora C. Myślisz że to 30 minut. Ale korytarze są dłuższe w środku niż na zewnątrz. Zegarek staje. Radio woła Cię po imieniu.</p>
-  <p class="highlight">Incydent nigdy się nie skończył. On czekał na Ciebie.</p>
+<div class="stats">
+<div class="stat"><h3>10</h3><div>MIAST DO SI10</div></div>
+<div class="stat"><h3>50%</h3><div>ZOMBIE POPULACJA</div></div>
+<div class="stat"><h3>6</h3><div>Ocalałych</div></div>
+<div class="stat"><h3>1989</h3><div>ROK BSI</div></div>
+</div>
 
-  <div class="small-title">Jak zginęli?</div>
-  <div class="box"><b>Dr. Marek Nowak</b> - Szef projektu. Znaleziony w sali kontroli. Twarz zastygła w krzyku. W jego oczach odbicie czegoś wysokiego bez twarzy.</div>
-  <div class="box"><b>Anna Kowalska</b> - Technik. Znaleziona w wentylacji o średnicy 30cm. Ciało połamane w 14 miejscach. W dłoni trzyma klucz do Sektora C. Nie puściła go nawet po śmierci.</div>
-  <div class="box"><b>Strażnik Piotr</b> - Przecięty na pół idealnie równo. Krew na suficie. Kamery pokazują że 3 godziny stał i patrzył w ścianę zanim zaczął krzyczeć.</div>
-  <div class="box"><b>Zespół BETA (6 osób)</b> - Zniknęli. Zostało 6 par butów stojących w idealnym kółku. W środku napis z krwi: NIE WYCHODŹ.</div>
+<div class="section-title">DRUŻYNA — KTO PRZEŻYJE?</div>
+<div class="grid">
+<div class="card"><b>Alex</b> - Główny <br><small>23 lata, lider</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Ethan Hunter</b><br><small>Taktyk</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Blake Miller</b><br><small>Mechanik</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Rayan Cole</b><br><small>Medyk</small><br><br><span class="badge dead">GINIE W SI1</span></div>
+<div class="card"><b>Jake Dawso</b><br><small>Zwiadowca</small><br><br><span class="badge dead">GINIE</span></div>
+<div class="card"><b>Leon Kalvinson</b><br><small>Najmłodszy</small><br><br><span class="badge dead">GINIE</span></div>
+</div>
 
-  <div class="small-title">System leczenia - Twój pomysł</div>
-  <p>To nie jest zwykła apteczka. Każde leczenie ma konsekwencje:</p>
-  <div class="box"><b>Bandaż:</b> +20% HP, ale musisz stać 8 sekund w miejscu. Jeśli coś Cię uderzy - krwawisz 2x szybciej. Musisz znaleźć bezpieczny kąt.</div>
-  <div class="box"><b>Morfina:</b> +40% HP natychmiast i brak bólu na 60 sekund. Ale możesz wziąć tylko 3 na całą grę. Czwarta zabija. Po morfinie widzisz rzeczy których nie ma.</div>
-  <div class="box"><b>Adrenalina:</b> Nie leczy, ale daje Ci 15 sekund super szybkości. Możesz wyważyć drzwi i uciec. Ale serce wali tak głośno że potwory słyszą Cię z 3x większej odległości.</div>
-  <div class="box"><b>Niebieskie światło w sali medycznej:</b> Stoisz w nim = leczysz się 1% na sekundę. Ale światło przyciąga Cień. Im dłużej stoisz, tym bliżej on jest.</div>
-</section>
+<div class="section-title">POTWORY BSI</div>
+<div class="grid">
+<div class="card monster"><h3 style="color:var(--red)">GOLDCREST BSI - B4 JAJO</h3><p style="margin-top:10px;color:#aaa">Ślepe. Nie widzą. Słyszą każdy oddech. Pazury tną beton. Gniazda w laboratoriach B4.</p></div>
+<div class="card monster"><h3 style="color:var(--red)">MEGA ZOMBIE 2.10m</h3><p style="margin-top:10px;color:#aaa">10% szans na spawn. Przełamuje barykady. Słychać go z kilometra.</p></div>
+<div class="card monster"><h3 style="color:var(--red)">ZAKOŃCZENIE SI1</h3><p style="margin-top:10px;color:#aaa">1km przed miastem brak paliwa. Barykada w domu w Westford. Kamera na drzwi. Klamka się uchyla... Czarny ekran: SHADOW INCYDENT 1</p></div>
+</div>
 
-<!-- GŁÓWNY DZIAŁ 2 -->
-<section id="gra">
-  <div class="big-title">O GRZE</div>
-  <p>SI1 to nie gra o zabijaniu. To gra o przetrwaniu i nie zwariowaniu.</p>
-  
-  <div class="small-title">Jak grać?</div>
-  <p>Idziesz powoli. Nasłuchujesz. Latarka ma słabe baterie. Każde drzwi mogą skrzypieć. Jeśli biegniesz - potwory Cię słyszą. Jeśli stoisz za długo - przychodzą sprawdzić.</p>
-  <p>Nie ma mapy. Musisz zapamiętać drogę. Ale Ośrodek zmienia korytarze kiedy nie patrzysz.</p>
+<div class="section-title">INFO TECHNICZNE</div>
+<div class="card" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px">
+<div><b>PLATFORMA</b><br>PC / PS5 / PS4</div>
+<div><b>BROŃ</b><br>Palna i biała + craft</div>
+<div><b>SILNIK</b><br>Unreal / Survival System</div>
+<div><b>STATUS</b><br><span class="badge alive">SI1 IN DEVELOPMENT</span></div>
+</div>
+</div>
 
-  <div class="small-title">Klimat</div>
-  <div class="box">Bez jumpscare. Strach jest powolny. Światła gasną jedno po drugim. Słyszysz drapanie w wentylacji. Widzisz cień w rogu oka. To zostaje w głowie na długo po wyłączeniu gry.</div>
-  
-  <div class="small-title">Ile trwa?</div>
-  <p>90-120 minut jedno przejście. 3 różne zakończenia. Żadne nie jest szczęśliwe.</p>
-</section>
-
-<!-- GŁÓWNY DZIAŁ 3 -->
-<section id="bronie">
-  <div class="big-title">BRONIE I POTWORY</div>
-
-  <div class="small-title">Bronie</div>
-  <div class="box"><b>Łom:</b> Cichy, nigdy się nie psuje. Uderz nim w rurę daleko od siebie - potwory pójdą sprawdzić hałas, a Ty uciekniesz.</div>
-  <div class="box"><b>Pistolet P-83 (8 kul):</b> Bardzo głośny. Jeden strzał = wszystkie potwory na piętrze wiedzą gdzie jesteś. Używaj tylko gdy nie ma innego wyjścia.</div>
-  <div class="box"><b>Latarka jako broń:</b> Mocny flash na 3 sekundy oślepia Cień. Masz 4 baterie. Potem jesteś w ciemności.</div>
-  <div class="box"><b>Gaśnica:</b> Robi chmurę dymu na 10 sekund. Potwory Cię nie widzą. Możesz się schować.</div>
-
-  <div class="small-title">Potwory</div>
-  <div class="box"><b>CIEŃ - Główny:</b> 2.2m wysokości, bez twarzy. Nie biega, tylko idzie. Wiesz że jest blisko bo wszystkie światła gasną po kolei. Jeśli patrzysz na niego dłużej niż 3 sekundy - zaczynasz krwawić. Nie da się go zabić.</div>
-  <div class="box"><b>Pełzacze:</b> Kiedyś byli ludźmi. Teraz pełzają po ścianach i suficie. Boją się światła. Słyszysz ich paznokcie drapiące o beton.</div>
-  <div class="box"><b>Głosy Ośrodka:</b> To nie potwór. To budynek. Naśladuje głosy zmarłych. Woła Cię po imieniu z wentylacji. Jeśli odpowiesz - coś przyjdzie.</div>
-</section>
-
-<footer>
-  SI1 // ARCHIWUM NIEBIESKIE // WERSJA PŁYNNA // WROCŁAW 2026
-</footer>
-
+<div class="footer">
+© 1989-1991 BSI PROJECT // SHADOW INCYDENT SAGA<br>
+SI1 — początek drogi po bombę z lekiem<br><br>
+kverek01.github.io/Shadow-Incydent-1
+</div>
 </body>
 </html>
