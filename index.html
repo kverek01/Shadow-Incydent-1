@@ -1,21 +1,91 @@
 <!DOCTYPE html>
-<html lang="pl"><head><meta charset="UTF-8"><title>SHADOW INCYDENT 1</title>
-<style>body{background:#0a0a0a;color:#ddd;font-family:monospace;padding:20px;max-width:800px;margin:auto}h1{color:#ff0000;letter-spacing:5px;border-bottom:2px solid red}h2{color:#ff0000;margin-top:40px}.alive{color:#00ff88}.dead{color:#ff4444}.card{border:1px solid #222;padding:15px;margin:10px 0;background:#111}</style></head><body>
-<h1>SHADOW INCYDENT 1</h1>
-<p><i>"Nie jest tylko jeden wirus, który niektórych zamienia w zombie, a niektórych zabija."</i> - Ravenwood 1989</p>
-<h2>FABUŁA</h2>
-<div class="card">Alex (23) i 5 kolegów po 2 latach w bunkrze wychodzą odkryć prawdę o BSI w Goldcrest. 50% ludzi to zombie. SI1 trwa rok - droga do pierwszego z 10 miast. Koniec sagi SI10: Bomba z lekiem. Gatunek: Survival/Horror/Akcja - 3 lata fabularnie.</div>
-<h2>DRUŻYNA - KTO PRZEŻYJE?</h2>
-<div class="card"><b>Alex</b> - <span class="alive">PRZEŻYJE</span> główny</div>
-<div class="card"><b>Ethan Hunter</b> - <span class="alive">PRZEŻYJE</span></div>
-<div class="card"><b>Blake Miller</b> - <span class="alive">PRZEŻYJE</span></div>
-<div class="card"><b>Rayan Cole</b> - <span class="dead">GINIE w SI1</span></div>
-<div class="card"><b>Jake Dawso</b> - <span class="dead">GINIE</span></div>
-<div class="card"><b>Leon Kalvinson</b> - <span class="dead">GINIE</span></div>
-<h2>ŚWIAT I POTWORY</h2>
-<div class="card"><b>GOLDCREST BSI - B4 JAJO:</b> Ślepe potwory z pazurami. Nie widzą, słyszą.</div>
-<div class="card"><b>MEGA ZOMBIE:</b> 2,10m - 10% spawn</div>
-<div class="card"><b>ZAKOŃCZENIE:</b> 1km przed miastem brak paliwa. Barykada w domu w Westford. Kamera na drzwi, klamka się uchyla. Czarny ekran: SHADOW INCYDENT 1</div>
-<div class="card"><b>PLATFORMA:</b> PC / PS5 / PS4 - <b>BROŃ:</b> Palna i biała</div>
-<p style="margin-top:50px;color:#555">© 1989 BSI Project | SI1 - początek drogi po bombę z lekiem</p>
-</body></html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHADOW: INCYDENT 1 | Oficjalna Strona</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--red:#ff0f2a;--green:#00ff88;--bg:#07080b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:radial-gradient(1200px 600px at 50% -10%, #1a1020 0%, var(--bg) 60%), var(--bg);color:#e6e6e6;font-family:'JetBrains Mono',monospace;overflow-x:hidden}
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;border-bottom:1px solid #1a1a1a}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg, transparent 0 2px, rgba(255,15,42,0.03) 2px 3px);pointer-events:none}
+.glitch{font-family:'Orbitron',sans-serif;font-size:clamp(2.5rem,9vw,6rem);font-weight:900;letter-spacing:0.15em;color:#fff;text-shadow:0 0 20px var(--red), 0 0 80px var(--red);animation:gl 3s infinite}
+@keyframes gl{0%,90%,100%{transform:none}92%{transform:skewX(5deg)}94%{transform:skewX(-5deg)}}
+.subtitle{margin-top:15px;color:#888;letter-spacing:0.4em;font-size:0.8rem}
+.quote{margin-top:30px;border-left:3px solid var(--red);padding:10px 20px;background:rgba(255,15,42,0.07);max-width:700px;font-style:italic;color:#bbb}
+.container{max-width:1100px;margin:auto;padding:60px 20px}
+.section-title{font-family:'Orbitron';font-size:2rem;color:var(--red);margin:70px 0 25px;letter-spacing:0.2em;display:flex;align-items:center;gap:15px}
+.section-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--red),transparent)}
+.card{background:linear-gradient(180deg,#111319,#0d0e12);border:1px solid #222;padding:25px;border-radius:12px;transition:0.3s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 10px 40px rgba(255,15,42,0.2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-size:0.7rem;font-weight:700;letter-spacing:0.1em}
+.alive{background:rgba(0,255,136,0.15);color:var(--green);border:1px solid var(--green)}
+.dead{background:rgba(255,15,42,0.15);color:var(--red);border:1px solid var(--red)}
+.stats{display:flex;gap:30px;margin:25px 0;flex-wrap:wrap}
+.stat h3{font-family:'Orbitron';font-size:2.5rem;color:var(--red)}
+.monster{border-left:4px solid var(--red)}
+.footer{margin-top:100px;padding:40px 20px;text-align:center;color:#444;border-top:1px solid #111;font-size:0.8rem}
+.btn{margin-top:35px;padding:14px 32px;background:var(--red);color:#fff;border:none;border-radius:6px;font-family:'Orbitron';letter-spacing:0.2em;cursor:pointer;box-shadow:0 0 30px rgba(255,15,42,0.6);transition:0.2s}
+.btn:hover{transform:scale(1.05);box-shadow:0 0 50px rgba(255,15,42,0.9)}
+.tag{color:#555;font-size:0.7rem;letter-spacing:0.3em}
+</style>
+</head>
+<body>
+<div class="hero">
+<div class="tag">BSI PROJECT // 1989 - 1991 // CLASSIFIED</div>
+<div class="glitch">SHADOW<br>INCYDENT 1</div>
+<div class="subtitle">SURVIVAL / HORROR / AKCJA</div>
+<div class="quote">"Nie jest tylko jeden wirus, który niektórych zamienia w zombie, a niektórych zabija." — Ravenwood, 1989</div>
+<button class="btn" onclick="document.getElementById('fabula').scrollIntoView({behavior:'smooth'})">WEJDŹ DO BUNKRA</button>
+<div style="position:absolute;bottom:25px;color:#333;font-size:0.7rem;letter-spacing:0.5em">SCROLL</div>
+</div>
+
+<div class="container" id="fabula">
+<div class="section-title">FABUŁA</div>
+<div class="card" style="font-size:1.05rem;line-height:1.7">
+Alex (23 lata) i 5 kolegów po <b style="color:#fff">2 LATACH</b> w bunkrze wychodzą na powierzchnię. Świat się skończył. 50% populacji to zombie, reszta martwa. Cel: odkryć prawdę o BSI w Goldcrest i dotrzeć do pierwszego z 10 miast. SI1 to rok drogi. Cała saga SI10 kończy się bombą z lekiem. <br><br>
+<span style="color:var(--red)">Gatunek:</span> 3 lata fabularnie | Droga pełna zasadzek | 1 km przed miastem kończy się paliwo
+</div>
+
+<div class="stats">
+<div class="stat"><h3>10</h3><div>MIAST DO SI10</div></div>
+<div class="stat"><h3>50%</h3><div>ZOMBIE POPULACJA</div></div>
+<div class="stat"><h3>6</h3><div>Ocalałych</div></div>
+<div class="stat"><h3>1989</h3><div>ROK BSI</div></div>
+</div>
+
+<div class="section-title">DRUŻYNA — KTO PRZEŻYJE?</div>
+<div class="grid">
+<div class="card"><b>Alex</b> - Główny <br><small>23 lata, lider</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Ethan Hunter</b><br><small>Taktyk</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Blake Miller</b><br><small>Mechanik</small><br><br><span class="badge alive">PRZEŻYJE</span></div>
+<div class="card"><b>Rayan Cole</b><br><small>Medyk</small><br><br><span class="badge dead">GINIE W SI1</span></div>
+<div class="card"><b>Jake Dawso</b><br><small>Zwiadowca</small><br><br><span class="badge dead">GINIE</span></div>
+<div class="card"><b>Leon Kalvinson</b><br><small>Najmłodszy</small><br><br><span class="badge dead">GINIE</span></div>
+</div>
+
+<div class="section-title">POTWORY BSI</div>
+<div class="grid">
+<div class="card monster"><h3 style="color:var(--red)">GOLDCREST BSI - B4 JAJO</h3><p style="margin-top:10px;color:#aaa">Ślepe. Nie widzą. Słyszą każdy oddech. Pazury tną beton. Gniazda w laboratoriach B4.</p></div>
+<div class="card monster"><h3 style="color:var(--red)">MEGA ZOMBIE 2.10m</h3><p style="margin-top:10px;color:#aaa">10% szans na spawn. Przełamuje barykady. Słychać go z kilometra.</p></div>
+<div class="card monster"><h3 style="color:var(--red)">ZAKOŃCZENIE SI1</h3><p style="margin-top:10px;color:#aaa">1km przed miastem brak paliwa. Barykada w domu w Westford. Kamera na drzwi. Klamka się uchyla... Czarny ekran: SHADOW INCYDENT 1</p></div>
+</div>
+
+<div class="section-title">INFO TECHNICZNE</div>
+<div class="card" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px">
+<div><b>PLATFORMA</b><br>PC / PS5 / PS4</div>
+<div><b>BROŃ</b><br>Palna i biała + craft</div>
+<div><b>SILNIK</b><br>Unreal / Survival System</div>
+<div><b>STATUS</b><br><span class="badge alive">SI1 IN DEVELOPMENT</span></div>
+</div>
+</div>
+
+<div class="footer">
+© 1989-1991 BSI PROJECT // SHADOW INCYDENT SAGA<br>
+SI1 — początek drogi po bombę z lekiem<br><br>
+kverek01.github.io/Shadow-Incydent-1
+</div>
+</body>
+</html>
