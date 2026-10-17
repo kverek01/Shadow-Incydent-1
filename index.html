@@ -3,77 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SHADOW INCYDENT 1 - RED EDITION</title>
+<title>SHADOW INCIDENT - Archiwum</title>
 <style>
-body { background: #000; color: #ff0000; font-family: monospace; margin: 0; }
-header { background: #ff0000; color: black; padding: 20px; text-align: center; font-size: 30px; font-weight: bold; box-shadow: 0 0 30px red; }
-nav { display: flex; justify-content: center; gap: 10px; background: #1a0000; padding: 15px; flex-wrap: wrap; }
-nav button { background: black; color: red; border: 2px solid red; padding: 10px 15px; cursor: pointer; font-weight: bold; }
-nav button:hover { background: red; color: black; box-shadow: 0 0 15px red; }
-section { display: none; padding: 20px; max-width: 800px; margin: auto; }
-section.active { display: block; }
-.box { border: 2px solid red; padding: 15px; margin: 15px 0; background: #110000; box-shadow: 0 0 10px #ff000033; }
-h2 { color: #ff0000; text-shadow: 0 0 10px red; border-bottom: 2px solid red; }
-.glitch { animation: glitch 0.3s infinite; }
-@keyframes glitch { 0% { transform: translate(0); } 50% { transform: translate(1px, -1px); color: white; } 100% { transform: translate(0); } }
+  body { background: #0a0a0a; color: #e0e0e0; font-family: monospace; margin: 0; padding: 0; }
+  header { border-bottom: 2px solid #cc0000; padding: 30px 20px; text-align: center; position: sticky; top: 0; background: #0a0a0a; z-index: 100; }
+  h1 { color: #cc0000; letter-spacing: 5px; margin: 0; font-size: 28px; }
+  .subtitle { color: #666; margin-top: 10px; font-size: 12px; letter-spacing: 2px; }
+  nav { margin-top: 20px; }
+  nav a { color: #888; border: 1px solid #333; padding: 8px 15px; margin: 5px; text-decoration: none; display: inline-block; transition: 0.3s; font-size: 12px; }
+  nav a:hover { color: #cc0000; border-color: #cc0000; background: #1a0000; }
+  section { max-width: 800px; margin: 0 auto; padding: 60px 20px; border-bottom: 1px solid #1a1a1a; }
+  h2 { color: #cc0000; border-left: 3px solid #cc0000; padding-left: 15px; }
+  .file { background: #111; border: 1px solid #222; padding: 15px; margin: 15px 0; }
+  .file b { color: #cc0000; }
+  .red { color: #cc0000; }
+  footer { text-align: center; padding: 40px; color: #333; font-size: 10px; }
 </style>
 </head>
 <body>
 
-<header class="glitch">☠️ SHADOW INCYDENT 1 - RED EDITION ☠️<br><small style="font-size:14px;">1000x LEPSZA NIŻ DEAD ZONA</small></header>
+<header>
+  <h1>SHADOW INCIDENT</h1>
+  <div class="subtitle">KLASYFIKOWANE ARCHIWUM // POZIOM DOSTĘPU 4</div>
+  <nav>
+    <a href="#fabula">FABUŁA</a>
+    <a href="#akta">AKTA</a>
+    <a href="#raporty">RAPORTY</a>
+    <a href="#dowody">DOWODY</a>
+    <a href="#kontakt">KONTAKT</a>
+  </nav>
+</header>
 
-<nav>
-<button onclick="show('fabula')">FABUŁA</button>
-<button onclick="show('akta')">AKTA TAJNE</button>
-<button onclick="show('raporty')">RAPORTY</button>
-<button onclick="show('dziennik')">DZIENNIK</button>
-<button onclick="show('gra')">GRAJ</button>
-</nav>
-
-<section id="fabula" class="active">
-<h2>📁 FABUŁA - POZIOM CZERWONY</h2>
-<div class="box">
-W 1997 roku w strefie zero zniknęło 17 osób. Rząd mówi że to wypadek. My wiemy że to kłamstwo. <br><br>
-<b>TY jesteś jednym z nich. I musisz wrócić. Ale coś wróciło z Tobą...</b>
-</div>
-<div class="box" style="border-color:white; color:white;">
-⚠️ DEAD ZONA to tylko zabawa. SHADOW INCYDENT to prawda która miała być ukryta.
-</div>
+<section id="fabula">
+  <h2>[01] FABUŁA</h2>
+  <p>W 1987 roku w jednostce badawczej "Ośrodek Cień" doszło do incydentu. Z oficjalnych dokumentów wynika, że był to wyciek gazu. Prawda jest inna.</p>
+  <p class="red">To miejsce nigdy nie powinno zostać otwarte.</p>
+  <p>Ty jesteś ostatnim badaczem, który ma dostęp do tych plików. Przeczytaj je wszystkie, zanim zostaną usunięte.</p>
 </section>
 
 <section id="akta">
-<h2>🔴 AKTA TAJNE - DOSTĘP ZABRONIONY</h2>
-<div class="box">[AKTA #001] Obiekt: SHADOW. Status: NIEZNISZCZALNY</div>
-<div class="box">[AKTA #002] Świadek: Mówił że widział czerwone oczy w ciemności. Potem zniknął.</div>
-<div class="box">[AKTA #003] Nagranie odzyskane: "ON TU JEST... ON..." [KONIEC NAGRANIA]</div>
-</section>
-
-<section id="raporty">
-<h2>📊 RAPORTY LABORATORIUM</h2>
-<div class="box">RAPORT 1: Poziom promieniowania: 1000% normy. Źródło: NIEZNANE</div>
-<div class="box">RAPORT 2: Wszystkie zegary zatrzymały się na 03:33. Co się dzieje o 03:33?</div>
-<div class="box">RAPORT 3: Znaleziono telefon. Ostatnia wiadomość: "NIE PATRZ ZA SIEBIE"</div>
-</section>
-
-<section id="dziennik">
-<h2>📓 DZIENNIK OCALAŁEGO</h2>
-<div class="box">Dzień 1: Słyszę kroki... ale nikogo nie ma.<br>Dzień 4: Znalazłem zdjęcie. To ja, ale nie pamiętam kiedy je zrobiłem.<br>Dzień 7: ON zna moje imię. Skąd?</div>
-</section>
-
-<section id="gra">
-<h2>🎮 POBIERZ GRĘ</h2>
-<div class="box" style="text-align:center; background:red; color:black; font-size:20px;">
-<b>SHADOW INCYDENT 1 - WKRÓTCE</b><br><br>
-To będzie gra 1000x lepsza niż Dead Zona.<br>
-I będzie na PC, a potem... na PS? Zobaczymy kto się będzie śmiał na końcu 😉
-</div>
-</section>
-
-<script>
-function show(id){
- document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
- document.getElementById(id).classList.add('active');
-}
-</script>
-</body>
-</html>
+  <h2>[02] AKTA PERSONELU</h2>
+  <div class="file"><b>AKTA #001:</b> Dr. Marek Nowak - Zaginiony 12.10
